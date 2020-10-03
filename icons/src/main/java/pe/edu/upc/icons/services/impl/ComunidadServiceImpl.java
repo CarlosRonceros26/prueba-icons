@@ -4,13 +4,17 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.transaction.Transactional;
 
 import pe.edu.upc.icons.models.entities.Comunidad;
 import pe.edu.upc.icons.models.repositories.ComunidadRepository;
 import pe.edu.upc.icons.services.ComunidadService;
 
+@Named
+@ApplicationScoped
 public class ComunidadServiceImpl implements ComunidadService, Serializable {
 
 	private static final long serialVersionUID = 1L;

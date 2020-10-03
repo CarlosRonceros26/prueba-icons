@@ -7,39 +7,28 @@
 	<title>Lista de comunidades</title>
 </h:head>
 <h:body>
-
-	<p:breadCrumb>
-		<p:menuitem value="Categorias" url="#" />
-		<p:menuitem value="Deportes" url="#" />
-		<p:menuitem value="Basketball" url="#" />
-		<p:menuitem value="NBA" url="#" />
-		<p:menuitem value="Teams" url="#" />
-		<p:menuitem value="L.A. Lakers" url="#" />
-		<p:menuitem value="Roster" url="#" />
-		<p:menuitem value="Kobe Bryant" url="#" />
-	</p:breadCrumb>
 	
 	<h1>Comunidades:</h1>
 
-	<p:dataTable var="usuario" value="#{dtUsuarioView.usuarios}">
+	<p:dataTable var="comunidad" value="#{dtComunidadView.comunidades}">
 		<p:column headerText="Id">
-			<h:outputText value="#{usuario.id}" />
+			<h:outputText value="#{comunidad.id}" />
 		</p:column>
 
-		<p:column headerText="Nombres y Apellidos">
-			<h:outputText value="#{usuario.nombresApellidos}" />
+		<p:column headerText="Nombre">
+			<h:outputText value="#{comunidad.nombre}" />
 		</p:column>
 
-		<p:column headerText="Correo electrónico">
-			<h:outputText value="#{usuario.email}" />
+		<p:column headerText="Descripcion">
+			<h:outputText value="#{comunidad.descripcion}" />
 		</p:column>
 
-		<p:column headerText="Direccion">
-			<h:outputText value="#{usuario.direccion}" />
+		<p:column headerText="Tema">
+			<h:outputText value="#{comunidad.tema}" />
 		</p:column>
 
-		<p:column headerText="Telefono">
-			<h:outputText value="#{usuario.telefono}" />
+		<p:column headerText="Fecha_Creacion">
+			<h:outputText value="#{comunidad.fechaCreacion}" />
 		</p:column>
 
 

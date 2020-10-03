@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -12,6 +14,8 @@ import javax.persistence.TypedQuery;
 import pe.edu.upc.icons.models.entities.Comunidad;
 import pe.edu.upc.icons.models.repositories.ComunidadRepository;
 
+@Named
+@ApplicationScoped
 public class ComunidadRepositoryImpl implements ComunidadRepository, Serializable {
 
 	private static final long serialVersionUID = 1L;
